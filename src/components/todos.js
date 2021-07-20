@@ -11,8 +11,8 @@ export const Todos = () => {
                 Todos
             </h1>
             <ul>
-                { todos.map((todo = '') =>
-                    <li>
+                { todos.map((todo = '', i) =>
+                    <li key={`todo-${i}`}>
                         { todo }
                     </li>
                 )}
