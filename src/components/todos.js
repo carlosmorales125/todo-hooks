@@ -3,6 +3,7 @@ import { TodosContext } from '../store/todos-context';
 
 export const Todos = () => {
     const [state, ] = useContext(TodosContext);
+    const { todos = [] } = state;
 
     return (
         <div>
@@ -10,7 +11,7 @@ export const Todos = () => {
                 Todos
             </h1>
             <ul>
-                { state.todos.map((todo = '') =>
+                { todos.map((todo = '') =>
                     <li>
                         { todo }
                     </li>

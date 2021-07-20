@@ -20,9 +20,16 @@ export const AddTodo = () => {
         <form onSubmit={(e) => handleSubmit(e)}>
             <label>
                 Add Todo
-                <input type="text" onChange={(e) => handleChange(e)} />
+                <input
+                    type="text"
+                    value={localTodoState}
+                    onChange={(e) => handleChange(e)}
+                />
             </label>
-            <input type="submit" value="Submit" />
+            <input
+                type="submit"
+                value="Submit"
+            />
         </form>
     );
 };
