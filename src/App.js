@@ -2,13 +2,15 @@ import React from 'react';
 import Todos from './components/todos';
 import TodosContextProvider from './store/todos-context';
 import AddTodo from './components/add-todo';
+import TodoHeading from './components/todo-heading';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container mx-auto">
         <TodosContextProvider>
-            <Todos/>
+            <TodoHeading />
             <AddTodo/>
+            <Todos/>
         </TodosContextProvider>
     </div>
   );
